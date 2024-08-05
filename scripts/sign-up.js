@@ -25,7 +25,7 @@ form.addEventListener("submit", async (event) => {
       window.location = "../index.html";
     }, 2300);
 
-    console.log("You have Successfully signIn",result.operationType);
+    console.log("You have Successfully signIn", result.operationType);
   } catch (error) {
     Swal.fire({
       title: "Failed!",

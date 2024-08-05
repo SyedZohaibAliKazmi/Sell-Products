@@ -1,177 +1,425 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: #FFF8D6;
+body {
+  background-color: #fff8d6;
 }
-header{
-    display: flex;
-    justify-content: center;
+header {
+  display: flex;
+  justify-content: center;
 }
-nav{
-    background-color: #8D2A00;
-    width: 90%;
-    height: 60px;
-    margin-top: 26px;
-    border-radius:50px;
-    color: #FFF8D6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav {
+  background-color: #8d2a00;
+  width: 90%;
+  height: 60px;
+  margin-top: 26px;
+  border-radius: 50px;
+  color: #fff8d6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-nav h1{
-    font-size: 36px;
-    margin-left: 30px;
+nav h1 {
+  font-size: 36px;
+  margin-left: 30px;
 }
-nav a{
-    text-decoration: none;
-    margin-right: 36px;
-    /* padding-right: 40px; */
-    font-size: 22px;
-    font-weight: bold;
-    background-color: #FFF8D6;
-    border-radius: 5px;
-    /* width: 12px;
-    height: 60px; */
-    color: #8D2A00;
-    align-items: center;
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    padding: 5px 10px 5px 10px;
+nav a {
+  text-decoration: none;
+  margin-right: 36px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #fff8d6;
+  border-radius: 5px;
+  color: #8d2a00;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
 }
 
 /* ======================================= Section 1 ============================================ */
 
-section{
+section {
+  display: flex;
+  justify-content: center;
+}
+.sec-1 {
+  background-color: #8d2a00;
+  width: 90%;
+  min-height: 150px;
+  border-radius: 20px;
+  margin-top: 26px;
+}
+.sec-1 h1 {
+  font-size: 36px;
+  margin: 10px 0px 0px 10px;
+  color: #fff8d6;
+}
+.inp {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 200px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  margin: 10px 10px 10px 10px;
+  outline: none;
+  border: 2px solid #fff8d6;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff8d6;
+  padding: 5px 5px 5px 27px;
+}
+::placeholder {
+  color: #fff8d6;
+  font-weight: 400;
+}
+button {
+  background-color: #fff8d6;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #8d2a00;
+}
+
+/* ======================================= Product ================================= */
+.all-products {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.container {
+  width: 400px;
+  min-height: 450px;
+  background-color: #8d2a00;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.container img {
+  width: 350px;
+  height: 320px;
+}
+.image {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+.container h2 {
+  font-size: 26px;
+  color: #fff8d6;
+  padding-top: 6px;
+  padding-left: 26px;
+}
+.container h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff8d6;
+  padding-top: 4px;
+  padding-left: 26px;
+}
+.container p {
+  font-size: 14px;
+  color: #fff8d6;
+  padding-top: 4px;
+  padding-left: 26px;
+}
+.date {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+/* ======================================= Footer ========================== */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8d2a00;
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
+}
+footer h1 {
+  font-size: 20px;
+  color: #fff8d6;
+}
+footer span {
+  font-size: 32px;
+}
+
+
+
+/* =====================================\ Responsive 450 px /========================= */
+
+@media screen and (max-width: 450px) {
+  nav {
+    background-color: #8d2a00;
+    width: 90%;
+    height: 40px;
+    margin-top: 26px;
+    border-radius: 50px;
+    color: #fff8d6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav h1 {
+    font-size: 28px;
+    margin-left: 30px;
+  }
+  nav a {
+    text-decoration: none;
+    margin-right: 26px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff8d6;
+    border-radius: 5px;
+    color: #8d2a00;
+    align-items: center;
+    padding: 5px 8px 5px 8px;
+  }
+
+  /* ======================================= Section 1 ============================================ */
+
+  section {
     display: flex;
     justify-content: center;
-  
-}
-.sec-1{
-    background-color: #8D2A00;
+  }
+  .sec-1 {
+    background-color: #8d2a00;
     width: 90%;
     min-height: 150px;
     border-radius: 20px;
     margin-top: 26px;
-}
-.sec-1 h1{
-    font-size: 36px;
-    margin:10px 0px 0px 10px;
-    color: #FFF8D6;
-}
-.inp{
+  }
+  .sec-1 h1 {
+    font-size: 30px;
+    margin: 10px 0px 0px 10px;
+    color: #fff8d6;
+  }
+  .inp {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* padding: 10px 10px 10px 10px; */
-    
-}
+  }
 
-input{
-    width: 200PX;
-    height: 20PX;
+  input {
+    width: 140px;
+    height: 20px;
     background: transparent;
     border: none;
     margin: 10px 10px 10px 10px;
     outline: none;
-    border: 2px solid #FFF8D6;
+    border: 2px solid #fff8d6;
     border-radius: 40px;
     font-size: 16px;
-    color: #FFF8D6;
+    font-weight: 500;
+    color: #fff8d6;
     padding: 5px 5px 5px 27px;
-}
-::placeholder{
-    color:#FFF8D6;
-    font-weight: 400;
-
-}
-button{
-    background-color: #FFF8D6;
-    width: 120px;
+  }
+  ::placeholder {
+    color: #fff8d6;
+    font-weight: 500;
+  }
+  button {
+    background-color: #fff8d6;
+    width: 100px;
     height: 40px;
     border-radius: 10px;
     font-size: 24px;
     font-weight: bold;
-    color: #8D2A00;
-}
+    color: #8d2a00;
+    margin: 10px;
+  }
 
-/* ======================================= Product ================================= */
-.all-products{
+  /* ======================================= Product ================================= */
+  .all-products {
     display: flex;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
-}
-.container{
-    width: 400px;
-    min-height: 450px;
-    background-color: #8D2A00;
+  }
+  .container {
+    width: 350px;
+    min-height: 420px;
+    background-color: #8d2a00;
     border-radius: 10px;
     margin-top: 20px;
-    /* margin: 15px; */
     overflow: hidden;
-
-}
-.container img{
-    /* padding: 10px 10px 10px 26px; */
-    width: 350px;
+  }
+  .container img {
+    width: 300px;
     height: 320px;
-
-    /* object-fit: cover; */
-    /* object-fit: contain; */
-}
-.image{
+  }
+  .image {
     margin-top: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
-}
-.container h2{
-    font-size: 26px;
-    color: #FFF8D6;
+  }
+  .container h2 {
+    font-size: 24px;
+    color: #fff8d6;
     padding-top: 6px;
     padding-left: 26px;
-}
-.container h3{
-    font-size: 28px;
-    font-weight:600;
-    color: #FFF8D6;
+  }
+  .container h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff8d6;
     padding-top: 4px;
     padding-left: 26px;
-}
-.container p{
+  }
+  .container p {
     font-size: 14px;
-    color: #FFF8D6;
+    color: #fff8d6;
     padding-top: 4px;
     padding-left: 26px;
-}
+    padding-right: 16px;
+  }
+  .date {
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
 
-/* ======================================= Footer ========================== */
+  /* ======================================= Footer ========================== */
 
-footer{
+  footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #8D2A00;
+    background-color: #8d2a00;
     width: 100%;
-    height: 60px;
+    height: 50px;
     margin-top: 30px;
-}
-footer h1{
-    font-size: 20px;
-    color: #FFF8D6;
-}
-footer span{
-    font-size: 32px;
+  }
+  footer h1 {
+    font-size: 18px;
+    color: #fff8d6;
+  }
+  footer span {
+    font-size: 26px;
+  }
 }
 
-.date{
+/* =====================================\ Responsive 375 px /========================= */
+
+@media screen and (max-width: 375px) {
+  nav h1 {
+    font-size: 24px;
+    margin-left: 26px;
+  }
+  nav a {
+    text-decoration: none;
+    margin-right: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #fff8d6;
+    border-radius: 5px;
+    color: #8d2a00;
+    align-items: center;
+    padding: 5px 5px 5px 5px;
+  }
+
+  /* ======================================= Section 1 ============================================ */
+
+  .sec-1 h1 {
+    font-size: 24px;
+    margin: 10px 0px 0px 10px;
+    color: #fff8d6;
+  }
+
+  input {
+    width: 140px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    margin: 10px 10px 10px 10px;
+    outline: none;
+    border: 2px solid #fff8d6;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff8d6;
+    padding: 5px 5px 5px 20px;
+  }
+  /* ======================================= Product ================================= */
+  .container {
+    width: 320px;
+    min-height: 420px;
+    background-color: #8d2a00;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .container img {
+    width: 280px;
+    height: 300px;
+  }
+  .image {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+  .container h2 {
+    font-size: 24px;
+    color: #fff8d6;
+    padding-top: 6px;
+    padding-left: 26px;
+  }
+  .container h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff8d6;
+    padding-top: 4px;
+    padding-left: 26px;
+  }
+  .container p {
+    font-size: 14px;
+    color: #fff8d6;
+    padding-top: 4px;
+    padding-left: 26px;
+    padding-right: 16px;
+  }
+  .date {
     font-size: 20px;
     font-weight: 900;
-    margin-top: 10px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+
+  /* ======================================= Footer ========================== */
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8d2a00;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+  }
+  footer h1 {
+    font-size: 14px;
+    color: #fff8d6;
+  }
+  footer span {
+    font-size: 22px;
+  }
 }
