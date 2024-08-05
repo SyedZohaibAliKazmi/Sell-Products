@@ -11,7 +11,7 @@ import {
 
 // ====================================\ Fire-storage /===================
 
-// import { storage, ref, uploadBytes, getDownloadURL } from "./fire-storage.js";
+import {  uploadBytes, ref,storage,getDownloadURL } from "./fire-storage.js";
 
 
 
@@ -26,18 +26,39 @@ import {
   const productName = document.querySelector(".product-name");
   const productPrice = document.querySelector(".product-price");
   const productDetail = document.querySelector(".product-detail");
+  const productImg = document.querySelector(".product-img");
   const allProducts = document.querySelector(".all-products");
   
   const myCollectionReference = collection(db, "products");
   
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-  
+
+
+    //  storage ka kaam ha 
+
+    const myfile =productImg.files[0]
+    // console.log("file",productImg.files[0]);
+
+    const storageRef = ref(storage,myfile.name);
+    
+
+  const imgSnapShot= await  uploadBytes(storageRef,myfile)
+  console.log("image uploaded", imgSnapShot)
+
+  const url = await getDownloadURL(storageRef)
+
+  // console.log("url:", url)
+
+
+
+//  store ka kaam ha 
+
     // obj ko db ma document
     const myProduct = {
       productName: productName.value,
       productPrice: Number(productPrice.value),
-      productImg: null,
+      productImg: url,
       productDetail: productDetail.value,
       createdAt: serverTimestamp(),
     };
@@ -51,6 +72,7 @@ import {
       console.log("Error adding document: ", e);
     }
     form.reset()
+    location.reload()
   });
   
   //
@@ -74,7 +96,7 @@ import {
 
     allProducts.innerHTML += `<section class="all-products">
     <div class="container">
-          <!-- <img src="" alt=""> -->
+          <img src="${product.productImg}" alt="" class="image"> 
           <h2>$ ${product.productPrice}</h2>
           <h3>${product.productName?.toUpperCase()}</h3>
           <p>${product.productDetail}</p>

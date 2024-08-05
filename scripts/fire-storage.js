@@ -25,4 +25,5 @@ const storage = getStorage(app);
 
 // Create a storage reference from our storage service
 
-export { storage, ref, uploadBytes, getDownloadURL };
+
+export { storage, ref, uploadBytes, getDownloadURL};
